@@ -47,7 +47,7 @@ node default {
     ensure => file,
     owner => 'root'
     group => 'root'
-    mode => '0644'
+    mode => '0755'
     content =>  "Managing File through puppet is fun! Wohoo! \n"
   }
 }
