@@ -44,16 +44,22 @@ node default {
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
   
+  # This is for the Homework 7.3 
+  host {'testing.puppetlabs.vm':
+    ensure => present,
+    ip     => '127.1.1.0',
+  }
+  
   #file {'/etc/motd':
   #  ensure => file,
-  #  owner => 'root',
-  #  group => 'root',
-  #  mode => '0755',
+  #  owner  => 'root',
+  #  group  => 'root',
+  #  mode   => '0755',
   #  content =>  "Managing File through puppet is fun! Wohoo! \n",
   #}
   
   exec {"cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
-     path => '/usr/local/bin',
+     path    => '/usr/local/bin',
      creates => '/etc/motd',
     }
    include users 
