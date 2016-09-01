@@ -9,11 +9,7 @@ file {'/etc/sysconfig/memcached':
    owner => 'root',
    group => 'root',
    mode => '0644',
-   #port => "11211",
-   #user => "memcached",
-   #maxconn => "96",
-   #cachesize => "32",
-   #options => "",
+   source => 'puppet:///modules/memcached/memcached',
 }
 
 service {'memcached':
