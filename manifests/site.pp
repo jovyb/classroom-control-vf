@@ -38,11 +38,11 @@ ini_setting { 'random ordering':
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
- # node default {
+ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
-#  notify { "Hello, my name is ${::hostname}": }
+  notify { "Hello, my name is ${::hostname}": }
   
   # This is for the Homework 7.3 
   host {'testing.puppetlabs.vm':
@@ -58,16 +58,28 @@ ini_setting { 'random ordering':
   #  content =>  "Managing File through puppet is fun! Wohoo! \n",
   #}
   
-  # exec {"cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
-  #   path    => '/usr/local/bin',
-  #   creates => '/etc/motd',
-  #  }
-  # include users 
-  # include skeleton
-# }
- 
- node 'jovyb' {
-    notify { 'This is for training 10.1':}
-    include memcached
-    include nginx
+  exec {"cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
+     path    => '/usr/local/bin',
+     creates => '/etc/motd',
+    }
+   
+   include users 
+   include skeleton
+   include memcached
+   include nginx
+  
+  #For Exercise 13.2 - Conditionals
+  
+  if $::virtual != 'physical' {
+    $vmname = capitalize($::virtual)
+    notify { "This is a ${vmname} virtual machine.": }
   }
+  
+}
+ 
+ 
+ #node 'jovyb' {
+ #  notify { 'This is for training 10.1':}
+ #   include memcached
+ #   include nginx
+ # }
