@@ -62,11 +62,11 @@ ini_setting { 'random ordering':
   #   path    => '/usr/local/bin',
   #   creates => '/etc/motd',
   #  }
-   include users 
-   include skeleton
-   include memcached
+  # include users 
+  # include skeleton
 # }
  
  node 'jovyb' {
     notify { 'This is for training 10.1':}
+    include memcached
   }
