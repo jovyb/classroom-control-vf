@@ -19,7 +19,7 @@ file {'/etc/sysconfig/memcached':
 service {'memcached':
    ensure => present,
    enable => true,
-   subscribe => File['/etc/sysconfig/memcached'],
+#   subscribe => File['/etc/sysconfig/memcached'],
 }
 
 }
