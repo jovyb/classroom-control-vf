@@ -69,4 +69,5 @@ ini_setting { 'random ordering':
  node 'jovyb' {
     notify { 'This is for training 10.1':}
     include memcached
+    include nginx
   }
