@@ -62,8 +62,9 @@ ini_setting { 'random ordering':
   #   path    => '/usr/local/bin',
   #   creates => '/etc/motd',
   #  }
- #  include users 
- #  include skeleton
+   include users 
+   include skeleton
+   include memcached
 # }
  
  node 'jovyb' {
