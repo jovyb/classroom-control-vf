@@ -17,7 +17,7 @@ file {'/etc/sysconfig/memcached':
 }
 
 service {'memcached':
-   ensure => present,
+   ensure => running,
    enable => true,
    require => File['/etc/sysconfig/memcached'],
 }
