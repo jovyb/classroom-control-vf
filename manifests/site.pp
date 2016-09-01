@@ -58,10 +58,10 @@ ini_setting { 'random ordering':
   #  content =>  "Managing File through puppet is fun! Wohoo! \n",
   #}
   
-  exec {"cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
-     path    => '/usr/local/bin',
-     creates => '/etc/motd',
-    }
-   include users 
-   include skeleton
+  #exec {"cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
+  #   path    => '/usr/local/bin',
+  #   creates => '/etc/motd',
+  #  }
+  # include users 
+  # include skeleton
 # }
