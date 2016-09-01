@@ -78,7 +78,7 @@ ini_setting { 'random ordering':
 }
  
  
- #node 'jovyb' {
+ #node 'jovyb.puppetlabs.vm' {
  #  notify { 'This is for training 10.1':}
  #   include memcached
  #   include nginx
