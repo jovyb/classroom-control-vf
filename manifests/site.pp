@@ -63,12 +63,12 @@ ini_setting { 'random ordering':
      creates => '/etc/motd',
     }
    
-   # include users 
-   # include skeleton
-   # include memcached
-   include nginx
+    include users 
+    include skeleton
+    include memcached
+   # include nginx
    # include aliases
-   # include users::admins
+    include users::admins
   
   #For Exercise 13.2 - Conditionals
   
