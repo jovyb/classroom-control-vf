@@ -24,7 +24,11 @@ class nginx (
       fail("Module ${module_name} is not supported on ${::osfamily}")
     }
   }
-
+    $docroot = $root ? {
+    undef = $default_docroot,
+    default = $root,
+    }
+    
   # user the service will run as. Used in the nginx.conf.erb template
   $user = $::osfamily ? {
     'redhat'  => 'nginx',
