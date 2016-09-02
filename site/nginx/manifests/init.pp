@@ -25,8 +25,8 @@ class nginx (
     }
   }
     $docroot = $root ? {
-    undef = $default_docroot,
-    default = $root,
+    undef => $default_docroot,
+    default => $root,
     }
     
   # user the service will run as. Used in the nginx.conf.erb template
