@@ -83,6 +83,10 @@ ini_setting { 'random ordering':
 
 }
  
+ # This is for exercise 18.1 
+  class { 'nginx':
+    root => '/opt/www',
+  }
  
  #node 'jovyb.puppetlabs.vm' {
  #  notify { 'This is for training 10.1':}
