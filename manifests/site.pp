@@ -77,6 +77,10 @@ ini_setting { 'random ordering':
     notify { "This is a ${vmname} virtual machine.": }
   }
   
+  # For exercise 17.1 - Hiera Functions
+  $message = hiera('message')
+  notify
+  
 }
  
  
