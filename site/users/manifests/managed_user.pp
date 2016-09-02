@@ -1,6 +1,9 @@
 define users::managed_user (
-$group = 'wheel',
-) {
+  $user   = $title,
+  $group  = 'wheel',
+  $shell  = '/bin/bash',
+  $home   = "/home/${title}",
+ ) {
 user { $title:
 ensure => present,
 }
