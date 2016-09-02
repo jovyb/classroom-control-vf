@@ -66,7 +66,7 @@ ini_setting { 'random ordering':
    # include users 
    # include skeleton
    # include memcached
-    include nginx
+   # include nginx
    # include aliases
    # include users::admins
   
