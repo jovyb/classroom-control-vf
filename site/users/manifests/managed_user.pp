@@ -1,5 +1,5 @@
 define users::managed_user (
-$group = $title,
+$group = 'wheel',
 ) {
 user { $title:
 ensure => present,
