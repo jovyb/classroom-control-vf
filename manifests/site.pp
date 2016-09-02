@@ -41,7 +41,7 @@ ini_setting { 'random ordering':
  node default {
   # This is where you can declare classes for all nodes.
   # Example:
-  #   class { 'my_class': }
+  # class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
   
   # This is for the Homework 7.3 
@@ -63,11 +63,11 @@ ini_setting { 'random ordering':
      creates => '/etc/motd',
     }
    
-   include users 
-   include skeleton
-   include memcached
-   include nginx
-   include aliases
+   # include users 
+   # include skeleton
+   # include memcached
+   # include nginx
+   # include aliases
   
   #For Exercise 13.2 - Conditionals
   
