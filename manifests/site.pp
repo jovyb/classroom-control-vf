@@ -79,8 +79,8 @@ ini_setting { 'random ordering':
   
   # For exercise 17.1 - Hiera Functions
   $message = hiera('message')
-  notify
-  
+  notify { $message: }
+
 }
  
  
