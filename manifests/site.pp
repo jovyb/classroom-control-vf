@@ -68,6 +68,7 @@ ini_setting { 'random ordering':
    # include memcached
    # include nginx
    # include aliases
+   include users::admins
   
   #For Exercise 13.2 - Conditionals
   
