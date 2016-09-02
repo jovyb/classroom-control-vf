@@ -67,6 +67,7 @@ ini_setting { 'random ordering':
    include skeleton
    include memcached
    include nginx
+   include aliases
   
   #For Exercise 13.2 - Conditionals
   
